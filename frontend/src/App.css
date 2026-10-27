@@ -1,0 +1,375 @@
+
+#root {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f7fb;
+  color: #1e293b;
+}
+
+.hero {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #123b65, #176b87);
+  color: white;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.report-button {
+  background-color: #e84b5b;
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.report-button:hover {
+  background-color: #c93646;
+}
+
+
+.report-form {
+  max-width: 450px;
+  margin: 35px auto 0;
+  padding: 28px;
+  background: white;
+  color: #1e293b;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  text-align: left;
+}
+
+.report-form h3 {
+  margin-top: 0;
+  text-align: center;
+  color: #123b65;
+}
+
+.report-form label {
+  display: block;
+  margin-top: 18px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.report-form input,
+.report-form select,
+.report-form textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  font-size: 15px;
+  font-family: inherit;
+}
+
+.report-form textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.report-form input:focus,
+.report-form select:focus,
+.report-form textarea:focus {
+  outline: 2px solid #176b87;
+  border-color: transparent;
+}
+
+.report-form button {
+  margin-top: 24px;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 60px 18px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .report-form {
+    padding: 20px;
+  }
+}
+/* SafeTrace dashboard */
+
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  width: 100%;
+  max-width: 900px;
+  margin: 30px auto;
+}
+
+.stat-card {
+  padding: 22px 12px;
+  background: white;
+  color: #222;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.stat-card h3 {
+  margin: 0 0 12px;
+  font-size: 16px;
+}
+
+.stat-number {
+  margin: 0;
+  font-size: 32px;
+  font-weight: bold;
+  color: #2563eb;
+}
+
+@media (max-width: 600px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+}
+/* Incident type breakdown */
+
+.incident-breakdown {
+  width: 100%;
+  max-width: 900px;
+  margin: 24px auto;
+  padding: 24px;
+  box-sizing: border-box;
+  background: white;
+  color: #222;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: left;
+}
+
+.incident-breakdown h3 {
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.breakdown-item {
+  margin-bottom: 20px;
+}
+
+.breakdown-label {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.breakdown-track {
+  height: 10px;
+  overflow: hidden;
+  background: #e5e7eb;
+  border-radius: 10px;
+}
+
+.breakdown-fill {
+  height: 100%;
+  background: #3984e8;
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+.breakdown-item:last-child {
+  margin-bottom: 0;
+}
+/* Admin reports table */
+
+.table-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 20px;
+  box-sizing: border-box;
+  background: white;
+  color: #222;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: left;
+}
+
+.table-container h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.reports-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.reports-table th,
+.reports-table td {
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+  vertical-align: top;
+}
+
+.reports-table th {
+  background: #f3f4f6;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.reports-table td {
+  overflow-wrap: anywhere;
+}
+
+.reports-table tbody tr:hover {
+  background: #f9fafb;
+}
+/* Search, filter, and sort controls */
+
+.report-controls {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.report-controls input,
+.report-controls select {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 11px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: white;
+  color: #222;
+  font: inherit;
+}
+
+.report-controls input:focus,
+.report-controls select:focus {
+  outline: 2px solid #3984e8;
+  outline-offset: 1px;
+}
+
+@media (max-width: 700px) {
+  .report-controls {
+    grid-template-columns: 1fr;
+  }
+}
+.chart-section {
+  background: #ffffff;
+  padding: 24px;
+  margin-top: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.chart-section h2 {
+  margin-bottom: 20px;
+  color: #1f2937;
+}
+.date-filter {
+  display: flex;
+  align-items: end;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.date-filter label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.date-filter input {
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+}
+
+.date-filter button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.charts-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+@media (max-width: 800px) {
+  .charts-container {
+    grid-template-columns: 1fr;
+  }
+  .chart-section {
+  padding: 16px;
+}
+
+.chart-section h2 {
+  font-size: 18px;
+}
+
+.date-filter {
+  align-items: stretch;
+  flex-direction: column;
+}
+
+.date-filter label {
+  width: 100%;
+}
+
+.date-filter input,
+.date-filter button {
+  width: 100%;
+  box-sizing: border-box;
+}
+}
+.main-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.nav-button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #2563eb;
+  color: white;
+  font-weight: 600;
+}
+
+.nav-button:hover {
+  background: #1d4ed8;
+}

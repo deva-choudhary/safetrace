@@ -1,0 +1,10 @@
+
+.env
+backend/.env
+
+# Local database and backup files
+backend/*.db
+backups/
+
+# Dependencies
+node_modules/
